@@ -1,7 +1,7 @@
 steps:
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/priyanka-pipeline', '/home/priyanka_jare/priyanka-first-repo/priyanka-first-repo/.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/priyanka-pipeline', '/.']
     # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/$PROJECT_ID/priyanka-pipeline']
