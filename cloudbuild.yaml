@@ -8,6 +8,6 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/priyanka-pipeline']
       # Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['run', 'deploy', 'cloud-run-deploy', '--image', 'gcr.io/$PROJECT_ID/priyanka-pipeline', '--region', 'europe-west2', '--platform', 'managed', '--allow-unauthenticated']
+    args: ['run', 'deploy', 'cloud-run-deploy', '--image', 'gcr.io/$PROJECT_ID/priyanka-pipeline', '--region', 'europe-west2', '--platform', 'managed', '--allow-unauthenticated','--port','80']
 images:
   - gcr.io/$PROJECT_ID/priyanka-pipeline
